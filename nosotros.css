@@ -2,8 +2,12 @@
   body{
     font-family: "Poppins";
   }
-  .img-bancos{
-    float: right;
+ 
+  .bancos{
+    flex-direction: column-reverse; /* Invierte el orden: imágenes abajo, texto arriba */
+    align-items: flex-end; /* Alinea todo a la derecha */
+    text-align: right; /* Asegura que el texto también esté alineado a la derecha */
+
   }
   .parrafo1{
     display: flex;
@@ -46,4 +50,34 @@ a{
 }
 a:hover{
   opacity: 0.2; 
+}
+
+.vision-mision{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+ 
+.if{
+  width: 17%;
+  padding: 20px;
+  border-radius: 10px;
+  color: aliceblue;
+  justify-content: space-between;
+
+}
+p{
+}
+.violeta{
+    background-color: #B39DDB;
+}
+.morado{
+  background-color: #7359a6;
+}
+
+
+
+h4{
+  font-size: 25px;
+  text-align: center;
 }
