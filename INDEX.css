@@ -1,0 +1,111 @@
+body {
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+}
+
+/* MENÚ */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #B39DDB;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.lista {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    margin-right: 25px;
+    transition: opacity 0.3s ease-in-out; 
+}
+
+li:hover {
+    opacity: 0.5;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* SECCIÓN INICIAL */
+.titular {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.abuscar {
+    font-size: 14px;
+    background-color: #B39DDB;
+    padding: 15px 25px;
+    color: white;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* GALERÍA DE LIBROS */
+.img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+.img-movimiento {
+    transition: transform 0.3s ease;
+}
+
+/* Computadora: imágenes grandes */
+@media screen and (min-width: 601px) {
+    .img-movimiento {
+        width: 150px;
+        height: 230px;
+    }
+
+    .img-movimiento img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+/* Teléfonos: 4 imágenes por fila y tamaño ajustado */
+@media screen and (max-width: 600px) {
+    .img-movimiento {
+        width: 45%; /* 4 imágenes por fila */
+        height: auto; /* Mantener proporción */
+    }
+
+    .img-movimiento img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Salto de fila después de la 4ta imagen */
+    .img-movimiento:nth-child(4) {
+        margin-right: 0;
+    }
+}
