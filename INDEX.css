@@ -1,0 +1,68 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.img-movimiento {
+    text-align: center;
+    width: 150px;
+}
+
+.img-movimiento a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.img-movimiento img,
+.img-movimiento p {
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-movimiento:hover img,
+.img-movimiento:hover p {
+    transform: scale(1.1);
+}
+
+.img-movimiento:hover {
+    background: none;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Responsivo para tablets y teléfonos */
+@media (max-width: 768px) {
+    .img {
+        justify-content: center;
+    }
+
+    .img-movimiento {
+        width: 180px;
+    }
+
+    .img-movimiento img {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-movimiento p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-movimiento {
+        width: 180px;
+    }
+
+    .img-movimiento p {
+        font-size: 13px;
+    }
+}
