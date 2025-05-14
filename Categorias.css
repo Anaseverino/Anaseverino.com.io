@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+    color: #333;
+}
+
+.menu {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.lista li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 1.6rem;
+}
+
+.libros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.libro {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.libro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.libro p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007b5e;
+}
+
+/* Responsive menú */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lista {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
