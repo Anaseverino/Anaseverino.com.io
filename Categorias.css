@@ -1,0 +1,102 @@
+body {
+    font-family: "Poppins";
+}
+
+li {
+    list-style: none;
+    margin-right: 25px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+li:hover {
+    opacity: 0.2;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #B39DDB;
+    border-radius: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.img {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.img-movimiento:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.book-card {
+    position: relative;
+    display: inline-block;
+}
+
+.new-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+/* ✅ NUEVO: estilo de los libros como grilla */
+.libros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 por fila en computadoras */
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.libro {
+    text-align: center;
+}
+
+.libro img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.libro img:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ NUEVO: Responsive para celulares (2 por fila) */
+@media screen and (max-width: 768px) {
+    .libros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lista {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
