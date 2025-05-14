@@ -1,0 +1,112 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+li{
+    list-style: none;
+    margin-right: 25px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+li:hover{
+    opacity: 0.2;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #B39DDB;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.lista{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.img{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.img-movimiento:hover{
+    box-shadow: 0 10px 20px rgb(0, 0, 0 0.20);
+    transform: scale(1.1);
+}
+
+.book-card {
+    position: relative;
+    display: inline-block;
+    width: 30%; /* En pantallas grandes, tres tarjetas por fila */
+    margin: 10px;
+}
+
+.new-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+/* Media Queries para hacer la página responsiva */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .lista {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .book-card {
+        width: 45%; /* Dos tarjetas por fila */
+        margin: 15px 2.5%; /* Espaciado entre tarjetas */
+    }
+
+    .img-movimiento {
+        transform: scale(1);
+    }
+}
+
+/* Pantallas medianas (tabletas y computadoras) */
+@media (min-width: 481px) {
+    .menu {
+        padding: 15px;
+    }
+
+    .lista {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    li {
+        margin-right: 20px;
+    }
+
+    .book-card {
+        width: 30%; /* Tres tarjetas por fila en pantallas más grandes */
+        margin: 10px;
+    }
+}
