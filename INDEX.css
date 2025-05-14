@@ -1,0 +1,122 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  header {
+    background-color: #B39DDB;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .lista {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+
+  .lista li:hover {
+    opacity: 0.2;
+    transition: opacity 0.3s;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .titular {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .titular h1 {
+    font-size: 50px;
+  }
+
+  .titular h2 {
+    font-size: 25px;
+  }
+
+  .abuscar {
+    font-size: 14px;
+    background-color: #B39DDB;
+    padding: 20px 30px;
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 40px;
+  }
+
+  hr {
+    margin: 40px 20px;
+  }
+
+  .img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .img-movimiento {
+    text-align: center;
+    width: 150px;
+  }
+
+  .img-movimiento img {
+    width: 150px;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 10px 20px rgb(0, 0, 0 0.20);
+    transform: scale(1.1);
+
+  }
+
+  /* RESPONSIVE PARA TELÉFONOS */
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lista {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .titular h1 {
+      font-size: 36px;
+    }
+
+    .titular h2 {
+      font-size: 22px;
+    }
+
+    .img-movimiento {
+      width: 45%;
+    }
+
+    .img-movimiento img {
+      width: 100%;
+      height: auto;
+    }
+  }
