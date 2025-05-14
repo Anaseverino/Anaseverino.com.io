@@ -1,0 +1,99 @@
+body {
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #B39DDB;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.lista {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-right: 25px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+li:hover {
+    opacity: 0.2;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.titular {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.abuscar {
+    font-size: 14px;
+    background-color: #B39DDB;
+    padding: 20px 30px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* Contenedor de los libros */
+.img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cada libro */
+.img-movimiento {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.img-movimiento:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de libro */
+.img img {
+    width: 150px;
+    height: 230px;
+    object-fit: cover;
+    border: none;
+}
+
+/* RESPONSIVE para teléfonos */
+@media (max-width: 768px) {
+    .img {
+        justify-content: center;
+        gap: 30px 20px;
+    }
+
+    .img-movimiento {
+        width: calc(50% - 20px);
+    }
+}
